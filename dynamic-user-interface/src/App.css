@@ -1,0 +1,96 @@
+/* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Authentication Container */
+.auth-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 300px;
+}
+
+/* Form Inputs */
+.auth-container input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Buttons */
+.auth-container button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.auth-container button:hover {
+  background-color: #218838;
+}
+
+/* Headings */
+.auth-container h2 {
+  color: #333;
+}
+
+
+
+
+/* Grocery Store Page */
+.store-container {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+  min-height: 100vh;
+}
+.grocery-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* Navigation */
+nav {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  color: #ffcc00;
+}
+
+
+
