@@ -50,12 +50,22 @@ body {
   color: #333;
 }
 
+
+
+
 /* Grocery Store Page */
 .store-container {
   text-align: center;
   padding: 20px;
   background: linear-gradient(to right, #ff9966, #ff5e62);
   min-height: 100vh;
+}
+.grocery-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  justify-content: center;
 }
 
 /* Navigation */
