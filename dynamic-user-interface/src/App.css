@@ -1,0 +1,114 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Authentication Containers */
+.auth-container {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  margin: 100px auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.auth-container h2 {
+  color: white;
+}
+
+.auth-container input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+}
+
+.auth-container button {
+  background-color: #ff4b2b;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.auth-container button:hover {
+  background-color: #ff1b0f;
+}
+
+/* Grocery Store */
+.store-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+nav {
+  background-color: #333;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+  color: white;
+  cursor: pointer;
+}
+
+.grocery-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.grocery-item {
+  background: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grocery-item h3 {
+  margin: 0;
+}
+
+.basket-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.basket-item {
+  background: #ffcccb;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.basket-item button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.basket-item button:hover {
+  background-color: darkred;
+}
+
