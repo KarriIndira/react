@@ -1,37 +1,38 @@
-/* General Styling */
+/* General Page Styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-/* Authentication Containers */
+/* Authentication Container */
 .auth-container {
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
-  padding: 30px;
+  background-color: white;
+  padding: 20px;
   border-radius: 10px;
-  width: 300px;
-  text-align: center;
-  margin: 100px auto;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 300px;
 }
 
-.auth-container h2 {
-  color: white;
-}
-
+/* Form Inputs */
 .auth-container input {
   display: block;
   width: 100%;
-  padding: 10px;
   margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
   border-radius: 5px;
-  border: none;
 }
 
+/* Buttons */
 .auth-container button {
-  background-color: #ff4b2b;
+  background-color: #28a745;
   color: white;
   padding: 10px;
   border: none;
@@ -41,19 +42,27 @@ body {
 }
 
 .auth-container button:hover {
-  background-color: #ff1b0f;
+  background-color: #218838;
 }
 
-/* Grocery Store */
+/* Headings */
+.auth-container h2 {
+  color: #333;
+}
+
+/* Grocery Store Page */
 .store-container {
   text-align: center;
   padding: 20px;
-  background-color: #fff;
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+  min-height: 100vh;
 }
 
+/* Navigation */
 nav {
   background-color: #333;
   padding: 10px;
+  text-align: center;
 }
 
 nav ul {
@@ -65,50 +74,13 @@ nav ul li {
   display: inline;
   margin: 0 15px;
   color: white;
+  font-weight: bold;
   cursor: pointer;
 }
 
-.grocery-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
+nav ul li:hover {
+  color: #ffcc00;
 }
 
-.grocery-item {
-  background: white;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
 
-.grocery-item h3 {
-  margin: 0;
-}
-
-.basket-list {
-  list-style-type: none;
-  padding: 0;
-}
-
-.basket-item {
-  background: #ffcccb;
-  margin: 5px;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.basket-item button {
-  background-color: red;
-  color: white;
-  border: none;
-  padding: 5px;
-  cursor: pointer;
-  border-radius: 3px;
-}
-
-.basket-item button:hover {
-  background-color: darkred;
-}
 
