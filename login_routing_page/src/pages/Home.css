@@ -1,0 +1,29 @@
+.home-container {
+    padding: 100px 2rem 2rem;
+    text-align: center;
+    min-height: 100vh;
+    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3D%2522fashion%2Bbackground%2522&psig=AOvVaw0noylI-y-hOmVYseWrdRsn&ust=1741329908789000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCODSisnt9IsDFQAAAAAdAAAAABAE'); /* Replace with your actual background image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Ensures text is readable over the background */
+.home-container h1 {
+    color: rgb(14, 13, 13); /* Change based on background contrast */
+    margin-bottom: 1rem;
+}
+
+.home-container p {
+    color: rgb(34, 25, 25); /* Adjust for better readability */
+    font-size: 1.2rem;
+}
+
+.hero-image {
+    height: 400px;
+    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3D%2522fashion%2Bbackground%2522&psig=AOvVaw0noylI-y-hOmVYseWrdRsn&ust=1741329908789000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCODSisnt9IsDFQAAAAAdAAAAABAE'); /* Hero image */
+    background-size: cover;
+    background-position: center;
+    margin-top: 2rem;
+    border-radius: 8px;
+}
