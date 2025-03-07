@@ -1,0 +1,97 @@
+Stopwatch Project Design Document
+
+1. Project Overview
+
+The Stopwatch project is a simple web application built using React. It allows users to start, stop, reset a timer, and toggle between light and dark modes. The app aims to demonstrate fundamental React concepts, including state management, effects, and event handling.
+
+2. Features
+
+Start the stopwatch to count seconds.
+
+Stop the stopwatch to pause counting.
+
+Reset the stopwatch to set time to 0.
+
+Toggle between light and dark mode for the interface.
+
+3. Technology Stack
+
+Frontend: React (Hooks: useState, useEffect)
+
+Styling: CSS (App.css)
+
+4. Component Breakdown
+
+Stopwatch Component: Handles all UI and logic.
+
+State Variables:
+
+time: Tracks elapsed time in seconds.
+
+isRunning: Boolean to control the timer.
+
+darkMode: Boolean for theme mode.
+
+Functions:
+
+handleStart(): Starts the timer.
+
+handleStop(): Pauses the timer.
+
+handleReset(): Stops and resets the timer.
+
+toggleDarkMode(): Switches the theme mode.
+
+5. Application Workflow
+
+Initialization:
+
+The component loads with default state (time = 0, isRunning = false, darkMode = false).
+
+Starting the Timer:
+
+User clicks the 'Start' button.
+
+handleStart() sets isRunning to true.
+
+useEffect starts a timer using setInterval, updating time every second.
+
+Stopping the Timer:
+
+User clicks the 'Stop' button.
+
+handleStop() sets isRunning to false.
+
+The timer interval is cleared using clearInterval in useEffect.
+
+Resetting the Timer:
+
+User clicks the 'Reset' button.
+
+handleReset() sets time to 0 and isRunning to false.
+
+Ensures the timer is not running and the display shows '0s'.
+
+Toggling Dark Mode:
+
+User clicks 'Toggle Dark Mode' button.
+
+toggleDarkMode() switches the darkMode state between true and false.
+
+The CSS class for dark mode is applied dynamically.
+
+6. Future Improvements
+
+Add lap time functionality.
+
+Implement a countdown timer mode.
+
+Enhance UI with better animations and styles.
+
+7. Design Considerations
+
+Simple and minimalistic design.
+
+Accessible color scheme for both light and dark modes.
+
+Responsive layout to work on different screen sizes.
