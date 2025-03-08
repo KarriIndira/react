@@ -1,0 +1,112 @@
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Light and Dark Theme */
+body.light {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+body.dark {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+/* Loader */
+.loader {
+  font-size: 1.2rem;
+  color: #888;
+  animation: pulse 1s infinite;
+}
+
+/* Loader Animation */
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* Toggle Button Styles */
+.toggle-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 2.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  transition: transform 0.3s, background-color 0.3s;
+  color: inherit;
+}
+
+.toggle-button:hover {
+  transform: scale(1.1) rotate(20deg);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.toggle-button:active {
+  transform: scale(1) rotate(0deg);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Centered Container */
+.home-container {
+  text-align: center;
+}
+
+/* Navigation Buttons */
+.button-group {
+  margin: 20px 0;
+}
+
+.nav-button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #555;
+  color: #fff;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-button:hover {
+  background-color: #777;
+  transform: scale(1.05);
+}
+
+.nav-button:active {
+  background-color: #333;
+}
+
+/* Content Section */
+.content-section {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #555;
+  border-radius: 10px;
+  min-height: 150px;
+  transition: background-color 0.3s;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+
