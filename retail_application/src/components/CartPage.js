@@ -39,3 +39,4 @@ const CartPage = ({ cart = [], setCart }) => {
 };
 
 export default CartPage;
+
