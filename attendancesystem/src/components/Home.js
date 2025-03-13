@@ -7,8 +7,7 @@ const Home = () => {
   const fullText = "Welcome to the Employee Attendance System";
   const navigate = useNavigate();
 
-  console.log("✅ Home component loaded!");
-
+  // Typing effect
   useEffect(() => {
     let index = 0;
     const interval = setInterval(() => {
@@ -16,8 +15,7 @@ const Home = () => {
       index++;
       if (index > fullText.length) clearInterval(interval);
     }, 100);
-
-    return () => clearInterval(interval); // Cleanup interval on unmount
+    return () => clearInterval(interval);
   }, []);
 
   return (

@@ -1,15 +1,8 @@
 import React from "react";
-import "./Reports.css";
+import "./Reports.css"; // Import CSS for styling
 
 const Reports = ({ employees }) => {
-  console.log("✅ Reports component loaded!", employees);
-
   const downloadReport = () => {
-    if (employees.length === 0) {
-      alert("⚠️ No data available to download!");
-      return;
-    }
-
     const csvContent =
       "Employee ID,Name,Email,Attendance\n" +
       employees
@@ -26,37 +19,29 @@ const Reports = ({ employees }) => {
   return (
     <div className="reports-container">
       <h2>Attendance Report</h2>
-      {employees.length === 0 ? (
-        <p>No employees found.</p>
-      ) : (
-        <>
-          <table className="reports-table">
-            <thead>
-              <tr>
-                <th>Employee ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Attendance</th>
-              </tr>
-            </thead>
-            <tbody>
-              {employees.map((employee, index) => (
-                <tr key={index}>
-                  <td>{employee.employeeId}</td>
-                  <td>{employee.name}</td>
-                  <td>{employee.email}</td>
-                  <td className={employee.status === "Present" ? "present" : "absent"}>
-                    {employee.status}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <button className="download-btn" onClick={downloadReport}>
-            📥 Download Report
-          </button>
-        </>
-      )}
+      <table className="reports-table">
+        <thead>
+          <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Attendance</th>
+          </tr>
+        </thead>
+        <tbody>
+          {employees.map((employee, index) => (
+            <tr key={index}>
+              <td>{employee.employeeId}</td>
+              <td>{employee.name}</td>
+              <td>{employee.email}</td>
+              <td className={employee.status === "Present" ? "present" : "absent"}>
+                {employee.status}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <button className="download-btn" onClick={downloadReport}>📥 Download Report</button>
     </div>
   );
 };

@@ -10,9 +10,10 @@ const App = () => {
   const [employees, setEmployees] = useState([]);
 
   useEffect(() => {
-    console.log("✅ App component loaded!");
-    const storedEmployees = JSON.parse(localStorage.getItem("employees")) || [];
-    setEmployees(storedEmployees);
+    const storedEmployees = JSON.parse(localStorage.getItem("employees"));
+    if (storedEmployees) {
+      setEmployees(storedEmployees);
+    }
   }, []);
 
   useEffect(() => {
@@ -22,21 +23,15 @@ const App = () => {
   return (
     <Router>
       <div className="app">
+        {/* Interactive Navbar */}
         <nav className="navbar">
-          <NavLink to="/" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
-            Home
-          </NavLink>
-          <NavLink to="/register" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
-            Register
-          </NavLink>
-          <NavLink to="/attendance-list" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
-            Attendance
-          </NavLink>
-          <NavLink to="/reports" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
-            Reports
-          </NavLink>
+          <NavLink to="/" className="nav-link" activeclassname="active">Home</NavLink>
+          <NavLink to="/register" className="nav-link" activeclassname="active">Register</NavLink>
+          <NavLink to="/attendance-list" className="nav-link" activeclassname="active">Attendance</NavLink>
+          <NavLink to="/reports" className="nav-link" activeclassname="active">Reports</NavLink>
         </nav>
 
+        {/* Animated Page Transitions */}
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -51,4 +46,3 @@ const App = () => {
 };
 
 export default App;
-

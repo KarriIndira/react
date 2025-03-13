@@ -1,24 +1,21 @@
 import React, { useState } from "react";
-import "./Register.css";
+import "./Register.css"; // Importing CSS for styling
 
 const Register = ({ employees, setEmployees }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [employeeId, setEmployeeId] = useState("");
 
-  console.log("✅ Register component loaded!");
-
   const registerEmployee = () => {
-    if (!name.trim() || !email.trim() || !employeeId.trim()) {
-      alert("⚠️ All fields are required!");
+    if (name.trim() === "" || email.trim() === "" || employeeId.trim() === "") {
+      alert("All fields are required!");
       return;
     }
-
     setEmployees([...employees, { name, email, employeeId, status: "Absent" }]);
     setName("");
     setEmail("");
     setEmployeeId("");
-    alert("🎉 Registered Successfully!");
+    alert("Registered Successfully");
   };
 
   return (
@@ -50,3 +47,4 @@ const Register = ({ employees, setEmployees }) => {
 };
 
 export default Register;
+
