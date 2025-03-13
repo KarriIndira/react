@@ -1,0 +1,65 @@
+Data Flow Diagram (DFD) for Attendance Management System
+
+Level 0 (Context Diagram)
+---------------------------
++-----------------------+
+|  External Entities    |
+|                       |
+|   - Employee          |
+|   - Admin            |
++-----------------------+
+          |
+          |
+          v
++------------------------+
+|  Attendance Management |
+| (Process: 1.0)        |
++------------------------+
+          |
+          |
+          v
++------------------------+
+|   Data Store: User DB  |
++------------------------+
+
+Explanation:
+- External Entity (Employee, Admin): Users interact with the Attendance Management System.
+- Process (Attendance Management): The system processes attendance records and employee data.
+- Data Store (User DB): Stores user credentials and attendance logs.
+
+Level 1 (Detailed DFD)
+---------------------------
++---------------------------+
+|    External Entities      |
+|  - Employee               |
+|  - Admin                  |
++---------------------------+
+         |                           |
+         |                           v
+         v                 +------------------------+
++------------------+        |  Process: 1.2 Admin   |
+| Process: 1.1     |        |   Authentication     |
+| User Authentication |       +------------------------+
++------------------+                |
+        |                            v
+        v                    +----------------------+
++--------------------+         |   Data Store: Admin DB |
+|  Data Store: User DB |        +----------------------+
++--------------------+
+        |
+        v
++------------------------+
+| Process: 1.3 Attendance |
+|   Marking & Validation |
++------------------------+
+        |
+        v
++------------------------+
+|   Data Store: Logs DB  |
++------------------------+
+
+Data Flow Explanation:
+1. Employees provide login credentials, which the system validates using the User DB.
+2. Admin authentication follows a similar process but uses the Admin DB.
+3. Employees can mark attendance, and the system validates and stores records in the Logs DB.
+4. The system generates attendance reports,

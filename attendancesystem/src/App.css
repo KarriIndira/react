@@ -1,0 +1,57 @@
+/* App Container */
+.app {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+/* Navbar Styles */
+.navbar {
+  background: #007bff;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Navbar Links */
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Hover & Active Effects */
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  transform: scale(1.1);
+}
+
+.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Content Area */
+.content {
+  padding: 30px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Page Transition Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
